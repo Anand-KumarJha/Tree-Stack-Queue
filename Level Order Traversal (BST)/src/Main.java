@@ -1,0 +1,15 @@
+public class Main {
+
+    public static void main(String[] args) {
+        QueueSolution solution = new QueueSolution();
+        LinkedListSolution recursiveSolution = new LinkedListSolution();
+        TreeNode t1 = new TreeNode(2);
+        TreeNode t2 = new TreeNode(3,t1,null);
+        TreeNode t3 = new TreeNode(4,null,t2);
+        TreeNode t4 = new TreeNode(5,t2,null);
+        TreeNode t5 = new TreeNode(2,t4,t3);
+
+        System.out.println(solution.levelOrder(t5));
+        System.out.println(recursiveSolution.levelOrder(t5));
+    }
+}
